@@ -28,14 +28,14 @@ def recebeValor(codigo, chave, temperatura):         #parâmetros definidos
 
 
 
-@app.route('/<string:temperatura>')
-def recebeValor2(temperatura):
-    data_e_hora_atuais = datetime.now()
-    fuso_horario = timezone("America/Sao_Paulo") #Escolhendo o fuso horário a ser usado
-    data_e_hora_sao_paulo = data_e_hora_atuais.astimezone(fuso_horario)
-    data_e_hora_sao_paulo_em_texto = data_e_hora_sao_paulo.strftime("%d/%m/%Y %H:%M") #Formatando a data e hora para o padrão do Brasil
-
-    arquivo=open(caminho,'a')
-    arquivo.write( "Id01"+ ',' + data_e_hora_sao_paulo_em_texto + ',' + str(temperatura) + "\n" )
-    arquivo.close()
-    return temperatura
+#@app.route('/<string:temperatura>')
+#def recebeValor2(temperatura):
+ #   data_e_hora_atuais = datetime.now()
+ #  fuso_horario = timezone("America/Sao_Paulo") #Escolhendo o fuso horário a ser usado
+ #   data_e_hora_sao_paulo = data_e_hora_atuais.astimezone(fuso_horario)
+ #  data_e_hora_sao_paulo_em_texto = data_e_hora_sao_paulo.strftime("%d/%m/%Y %H:%M") #Formatando a data e hora para o padrão do Brasil
+ #
+ #   arquivo=open(caminho,'a')
+ #   arquivo.write( "Id01"+ ',' + data_e_hora_sao_paulo_em_texto + ',' + str(temperatura) + "\n" )
+ #   arquivo.close()
+ #   return temperatura
